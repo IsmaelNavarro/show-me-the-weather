@@ -16,10 +16,9 @@ let location = process.argv[2];
 weatherService
     .getCurrentWeather(location)
     .then( response => {
-
         console.table([
             {
-                location,
+                location: `${weatherService.getWeatherIcon(response.weather.id)} ${location}`,
                 temperature: `${response.main.temp}ºC`,
                 humidity: `${response.main.humidity}%`,
 
