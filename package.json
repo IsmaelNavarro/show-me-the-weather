@@ -1,0 +1,22 @@
+{
+  "name": "weather-cli",
+  "version": "1.0.0",
+  "description": "weather cli command",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IsmaelNavarro/weather-cli.git"
+  },
+  "author": "Ismael Navarro & Ignacio Villanueva & Israel Vilches",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/IsmaelNavarro/weather-cli/issues"
+  },
+  "homepage": "https://github.com/IsmaelNavarro/weather-cli#readme",
+  "dependencies": {
+    "axios": "^0.18.0"
+  }
+}
