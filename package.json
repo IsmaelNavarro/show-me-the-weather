@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/IsmaelNavarro/weather-cli#readme",
   "dependencies": {
-    "axios": "^0.18.0"
+    "axios": "^0.18.0",
+    "console.table": "^0.10.0"
   }
 }
