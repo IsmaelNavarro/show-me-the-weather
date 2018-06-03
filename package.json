@@ -1,5 +1,5 @@
 {
-  "name": "showMeTheWeather",
+  "name": "show-me-the-weather",
   "version": "1.0.0",
   "description": "weather cli command",
   "preferGlobal": true,
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/IsmaelNavarro/showMeTheWeather.git"
+    "url": "git+https://github.com/IsmaelNavarro/show-me-the-weather.git"
   },
   "author": "Ismael Navarro & Ignacio Villanueva & Israel Vilches",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/IsmaelNavarro/weather-cli/issues"
+    "url": "https://github.com/IsmaelNavarro/show-me-the-weather/issues"
   },
-  "homepage": "https://github.com/IsmaelNavarro/weather-cli#readme",
+  "homepage": "https://github.com/IsmaelNavarro/show-me-the-weather#readme",
   "dependencies": {
     "axios": "^0.18.0",
     "console.table": "^0.10.0",
