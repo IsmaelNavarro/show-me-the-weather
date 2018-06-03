@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const weatherService = require('./weatherService');
 const cTable = require('console.table');
 
