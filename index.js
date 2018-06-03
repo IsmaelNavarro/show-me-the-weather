@@ -18,7 +18,7 @@ weatherService
     .then( response => {
         console.table([
             {
-                location: `${weatherService.getWeatherIcon(response.weather.id)} ${location}`,
+                location: `${weatherService.getWeatherIcon(response.weather.id)}  ${location}`,
                 temperature: `${response.main.temp}ºC`,
                 humidity: `${response.main.humidity}%`,
 
