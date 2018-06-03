@@ -2,10 +2,18 @@ const config = require('./config');
 const axios = require('axios');
 var emoji = require('node-emoji');
 
+const getOptionsQueried = (options) => {
+    let optionsQueried = '';
+    for(let key in options) {
+        optionsQueried += `&${key}=${options[key]}`;
+    }
+    return optionsQueried;
+}
+
 module.exports = {
-    getCurrentWeather: (location) => {
+    getCurrentWeather: (location, options) => {
          return axios
-            .get(`${config.API_ENDPOINT}&q=${location}&appid=${config.API_KEY}`)
+            .get(`${config.API_ENDPOINT}?q=${location}&appid=${config.API_KEY}${getOptionsQueried(options)}`)
             .then(response => {
                 return new Promise((resolve, reject) => {
                     resolve(response.data);
