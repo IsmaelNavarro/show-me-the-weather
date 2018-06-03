@@ -21,6 +21,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "console.table": "^0.10.0",
+    "minimist": "^1.2.0",
     "node-emoji": "^1.8.1"
   }
 }
