@@ -3,18 +3,40 @@ const argv = require('minimist')(process.argv.slice(2));
 const weatherService = require('./weatherService');
 const cTable = require('console.table');
 const config = require('./config');
+const fs = require('fs');
 
-if (process.argv && process.argv.length < 3) {
+const apikeyFile = 'openweatherapikey';
+
+let { _: locations, ...optionalParams } = argv;
+
+if (typeof optionalParams.apikey !== 'undefined') {
+    fs.writeFileSync(apikeyFile, optionalParams.apikey);
+}
+
+// Get api key
+let apikey = '';
+try {
+    apikey = fs.readFileSync(apikeyFile, 'utf8');
+    if (apikey === '')
+        throw new Exception();
+    weatherService.setApiKey(apikey);
+}
+catch (e) {
+    console.log('You have to set the openweather apikey');
+    console.log('show-me-the-weather --apikey=XXXXXXX');
+    process.exit();
+}
+
+
+if (locations.length === 0) {
     console.log
         (
         `You must specify at least one location
 v.g:
-node index.js [locationA locationB]`
+show-me-the-weather [locationA locationB]`
         );
     process.exit();
 }
-
-let { _: locations, ...optionalParams } = argv;
 
 let options = Object.assign({}, config.DEFAULT_OPTIONS);
 Object.keys(optionalParams)

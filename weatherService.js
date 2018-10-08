@@ -5,9 +5,12 @@ var emoji = require('node-emoji');
 const getOptionsQueried = options => Object.keys(options).reduce((accumulator, key) => `&${key}=${options[key]}`, '');
 
 module.exports = {
+    setApiKey: (apiKey) => {
+        this.apiKey = apiKey;
+    },
     getCurrentWeather: (location, options) => {
         return axios
-            .get(`${config.API_ENDPOINT}?q=${location}&appid=${config.API_KEY}${getOptionsQueried(options)}`)
+            .get(`${config.API_ENDPOINT}?q=${location}&appid=${this.apiKey}${getOptionsQueried(options)}`)
             .then(response => {
                 return new Promise((resolve, reject) => {
                     resolve(response.data);
