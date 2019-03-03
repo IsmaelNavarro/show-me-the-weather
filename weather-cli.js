@@ -4,8 +4,9 @@ const weatherService = require('./weatherService');
 const cTable = require('console.table');
 const config = require('./config');
 const fs = require('fs');
+const path = require('path');
 
-const apikeyFile = 'openweatherapikey';
+const apikeyFile = path.resolve(__dirname, 'openweatherapikey');
 
 let { _: locations, ...optionalParams } = argv;
 
