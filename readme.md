@@ -1,6 +1,6 @@
 # Show me the weather
 
-Show me the weather is an awesome tool to check the weather of a city in you command line.
+Show me the weather is an awesome tool to check the weather of a city in your command line.
 
 To obtain the weather of a certain region it uses [OpenWeather](https://openweathermap.org/), so you have to get one api key.
 
